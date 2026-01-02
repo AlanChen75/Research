@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual envs
+venv/
+env/
+ENV/
+/.venv
+
+# Conda
+*.conda
+
+# Data and outputs
+/data/
+/results/
+/models/
+/checkpoints/
+*.ckpt
+*.pth
+*.pt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Misc
+*.tmp
+*.bak
+.DS_Store
+.DS_Store

@@ -1,0 +1,141 @@
+{
+    "version": "1.0",
+    "total_attributes": 20,
+    "tiers": {
+        "power_shape": {
+            "PS1": {
+                "name": "constant_high",
+                "text": "sustained high power consumption above 500W"
+            },
+            "PS2": {
+                "name": "constant_low",
+                "text": "sustained low power consumption under 200W"
+            },
+            "PS3": {
+                "name": "cyclic",
+                "text": "power cycles on and off periodically"
+            },
+            "PS4": {
+                "name": "burst",
+                "text": "short bursts of high power"
+            },
+            "PS5": {
+                "name": "fluctuating",
+                "text": "continuously fluctuating power levels"
+            }
+        },
+        "temporal": {
+            "T1": {
+                "name": "long_operation",
+                "text": "operates continuously for 30+ minutes"
+            },
+            "T2": {
+                "name": "short_usage",
+                "text": "used for less than 10 minutes at a time"
+            },
+            "T3": {
+                "name": "periodic_cycle",
+                "text": "regular on-off cycles every 15-30 minutes"
+            },
+            "T4": {
+                "name": "instantaneous",
+                "text": "very brief operation under 5 minutes"
+            }
+        },
+        "load_type": {
+            "L1": {
+                "name": "resistive",
+                "text": "purely resistive heating load with stable power"
+            },
+            "L2": {
+                "name": "inductive_motor",
+                "text": "inductive motor load with startup surge"
+            },
+            "L3": {
+                "name": "switching",
+                "text": "switching power supply with high frequency noise"
+            },
+            "L4": {
+                "name": "heating_element",
+                "text": "resistive heating element with thermal cycling"
+            },
+            "L5": {
+                "name": "compressor",
+                "text": "compressor motor with periodic start-stop"
+            }
+        },
+        "power_level": {
+            "P1": {
+                "name": "very_high",
+                "text": "power consumption above 1500W"
+            },
+            "P2": {
+                "name": "high",
+                "text": "power consumption between 500W and 1500W"
+            },
+            "P3": {
+                "name": "medium",
+                "text": "power consumption between 100W and 500W"
+            },
+            "P4": {
+                "name": "low",
+                "text": "power consumption below 100W"
+            }
+        },
+        "stability": {
+            "S1": {
+                "name": "stable",
+                "text": "very stable and consistent power draw"
+            },
+            "S2": {
+                "name": "variable",
+                "text": "highly variable and unpredictable power"
+            }
+        }
+    },
+    "device_mapping": {
+        "fridge": [
+            "L5",
+            "T3",
+            "P4",
+            "PS3",
+            "S1"
+        ],
+        "microwave": [
+            "L1",
+            "T4",
+            "P1",
+            "PS4",
+            "S1"
+        ],
+        "dish washer": [
+            "L2",
+            "L4",
+            "T1",
+            "P2",
+            "PS5"
+        ],
+        "washer dryer": [
+            "L2",
+            "L4",
+            "T1",
+            "P1",
+            "PS5",
+            "S2"
+        ],
+        "electric stove": [
+            "L1",
+            "T2",
+            "P1",
+            "PS1",
+            "S1"
+        ],
+        "electric space heater": [
+            "L4",
+            "T1",
+            "P2",
+            "PS1",
+            "S1"
+        ]
+    }
+}
